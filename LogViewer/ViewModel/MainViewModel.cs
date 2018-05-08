@@ -11,7 +11,7 @@ namespace LogViewer.ViewModel
     public class MainViewModel : ViewModelBase
     {
         private ObservableCollection<SensorModel> log;
-        private WcfServiceDefinitionClient client = new WcfServiceDefinitionClient();
+        public WcfServiceDefinitionClient client = new WcfServiceDefinitionClient();
 
         public ObservableCollection<SensorModel> Log
         {
@@ -22,7 +22,17 @@ namespace LogViewer.ViewModel
         public MainViewModel()
         {
             Log = new ObservableCollection<SensorModel>(client.GetSensorData());
+            //BEGIN
+            ThreadPool.QueueUserWorkItem(
+                o =>
+                {
+                    while (true)
+                    {
+                        Thread.Sleep(5000);
+                        Log = new ObservableCollection<SensorModel>(client.GetSensorData());
+                    }
+                });
+            //END
         }
-
     }
 }
