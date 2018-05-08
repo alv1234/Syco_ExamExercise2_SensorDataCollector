@@ -21,17 +21,8 @@ namespace LogViewer.ViewModel
 
         public MainViewModel()
         {
-            FetchSensorData();
+            Log = new ObservableCollection<SensorModel>(client.GetSensorData());
         }
 
-        private void FetchSensorData()
-        {
-            while (true)
-            {
-                Thread.Sleep(5000);
-                var result = client.GetSensorData();
-                //Log = new ObservableCollection<SensorModel>(client.GetSensorData());
-            }
-        }
     }
 }

@@ -30,6 +30,7 @@ namespace DataModel
                     Value = _value
                 };
                 dbmodel.wi16b087_SensorLogs.Add(newSensorLog);
+                dbmodel.SaveChanges();
             }
             catch (Exception)
             {

@@ -51,6 +51,10 @@
     <None Include="app.config" />
   </ItemGroup>
   <ItemGroup>
+    <ProjectReference Include="..\DataModel\DataModel.csproj">
+      <Project>{3ab6caea-c6f7-48a6-a9be-61b837909c68}</Project>
+      <Name>DataModel</Name>
+    </ProjectReference>
     <ProjectReference Include="..\Shared\Shared.csproj">
       <Project>{D9D1FB62-386B-4334-8138-510540AB8EB4}</Project>
       <Name>Shared</Name>
