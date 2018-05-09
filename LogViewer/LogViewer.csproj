@@ -109,16 +109,16 @@
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
     </EmbeddedResource>
-    <None Include="Connected Services\SR_ServiceLayer\item.xsd">
+    <None Include="Connected Services\SR_ServiceLayer\service.wsdl" />
+    <None Include="Connected Services\SR_ServiceLayer\service.xsd">
       <SubType>Designer</SubType>
     </None>
-    <None Include="Connected Services\SR_ServiceLayer\item1.xsd">
+    <None Include="Connected Services\SR_ServiceLayer\service1.xsd">
       <SubType>Designer</SubType>
     </None>
-    <None Include="Connected Services\SR_ServiceLayer\item2.xsd">
+    <None Include="Connected Services\SR_ServiceLayer\Shared.xsd">
       <SubType>Designer</SubType>
     </None>
-    <None Include="Connected Services\SR_ServiceLayer\WcfServiceDefinition.wsdl" />
     <None Include="packages.config" />
     <None Include="Properties\DataSources\Shared.SensorModel.datasource" />
     <None Include="Properties\Settings.settings">
@@ -140,9 +140,6 @@
   </ItemGroup>
   <ItemGroup>
     <WCFMetadataStorage Include="Connected Services\SR_ServiceLayer\" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Connected Services\SR_ServiceLayer\item.disco" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Connected Services\SR_ServiceLayer\configuration91.svcinfo" />

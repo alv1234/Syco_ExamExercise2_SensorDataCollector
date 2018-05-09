@@ -11,7 +11,7 @@ namespace LogViewer.ViewModel
     public class MainViewModel : ViewModelBase
     {
         private ObservableCollection<SensorModel> log;
-        public WcfServiceDefinitionClient client = new WcfServiceDefinitionClient();
+        public WcfServiceDefinitionClient client = new WcfServiceDefinitionClient("tcpWcfService");
 
         public ObservableCollection<SensorModel> Log
         {

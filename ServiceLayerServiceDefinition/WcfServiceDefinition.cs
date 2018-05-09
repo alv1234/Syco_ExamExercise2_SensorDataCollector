@@ -22,6 +22,7 @@ namespace ServiceLayerServiceDefinition
 
         public List<SensorModel> GetSensorData()
         {
+            sensors = new List<SensorModel>();
             var result = dbprovider.QuerySensorsLogs();
             foreach (var item in result)
             {
