@@ -26,6 +26,8 @@ namespace SensorApp
                 Thread.Sleep(5000);
             }
 
+
+
         }
     }
 }
